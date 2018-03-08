@@ -131,7 +131,12 @@ class round_data():
     def round_all(self):
         for row in self.unscaled:
             for i in range(len(row)):
-                row[i] = np.int(np.round(row[i]))
+                if i < 6:
+                    row[i] = np.int(np.round(row[i]))
+                elif row[i] > 0 and i != 8:
+                    row[i] = 1
+                elif row[i] <= 0 and i != 8:
+                    row[i] = -1
             self.rounded.append(row)
         return self.rounded
 
