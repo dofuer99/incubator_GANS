@@ -10,6 +10,3 @@ Traing will fail if the number of person of one sample is higher than 30.
 'gan_data_conv.py' is the version where several person are grouped as one input sample and one sampled is represented by an image.
 Convolutional NN might be nice here because both the input and output are images. However, due to the simplicity, Fully connected NN
 still works here.
-
-'gan_cat_adapt.py' is the most updated version with the concept that the disciminator and generator are not trained as the same times.
-If the generator is better than the discriminator, the discriminator is trained more times and vice versa.
